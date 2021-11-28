@@ -1,0 +1,110 @@
+body{
+  margin: 0
+}
+
+
+.wrapper{
+  display: grid;
+  width: 100%;
+  height:100%;
+  align-content: center;
+  justify-content: center;
+  position: absolute;
+}
+
+.box{
+  z-index: 0;
+  top: 710px;
+  left: 600px;
+  position: fixed;
+  /* border: solid; */
+  font-family: bold;
+  color: darkgray
+  border-color: darkgray;
+  font-size: 23px;
+  padding: none;
+  text-align: center;
+}
+
+.purple{
+  z-index: 0;
+  top: 700px;
+  left: 200px;
+  position: fixed;
+
+}
+
+
+.green{
+  z-index: 0;
+  top: 700px;
+  left: 900px;
+  position: fixed;
+}
+
+.heading{
+  z-index: 0;
+  top: 60px;
+  left: 650px;
+  position: fixed;
+}
+
+
+.firstbody{
+  background-image: url(bckg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container{
+  z-index: 0;
+  top: 0px;
+  left: 50px;
+  width: 900px;
+  height: 550px;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.front{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: DarkOrchid;
+  /* background-image: url(hurtseyes.png); */
+  width: 100%;
+  height: 100%;
+  transform: translateZ(2px);
+
+}
+
+
+.back{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: chartreuse;
+  width: 100%;
+  height: 100%;
+  transform: rotateY(180deg) translateZ(-1px);
+}
+
+.back video{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.anim{
+  animation-name: spin;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes spin {
+  from { transform: rotateY(0deg);}
+    to{ transform: rotateY(180deg);}
+}
